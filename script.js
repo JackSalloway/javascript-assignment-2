@@ -8,13 +8,17 @@ for (let gridCount = 1; gridCount <= 256; gridCount++) {
     container.appendChild(divGrid);
 }
 
-const gridBox = document.querySelectorAll('.grid');
+const attachGridListeners = () => {
+    const gridBox = document.querySelectorAll('.grid');
 
-gridBox.forEach((grid) => {
-    grid.addEventListener('mouseover', (e) => {
-        e.target.style.backgroundColor = 'black';
+    gridBox.forEach((grid) => {
+        grid.addEventListener('mouseover', (e) => {
+            e.target.style.backgroundColor = 'black';
+        })
     })
-})
+}
+
+attachGridListeners();
 
 const slider = document.getElementById('pixel-slider');
 const sliderValue = document.getElementById('slider-value');
@@ -36,6 +40,8 @@ const generateGrid = () => {
         divGrid.setAttribute('style', `width: ${640 / slider.value}px; height: ${640 / slider.value}px`);
         container.appendChild(divGrid);
     }
+
+    attachGridListeners();
 }
 
 slider.onchange = generateGrid;
