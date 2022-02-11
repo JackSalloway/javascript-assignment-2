@@ -27,6 +27,15 @@ const generateGrid = () => {
     while (container.childNodes[0]) {
         container.removeChild(container.childNodes[0]);
     }
+
+    for (let gridCount = 1; gridCount <= squared; gridCount++) {
+        const divGrid = document.createElement('div');
+        divGrid.classList.add('grid');
+        container.setAttribute('style', `grid-template-columns: repeat(${slider.value}, 1fr); grid-template-rows: repeat(${slider.value}, 1fr)`)
+        divGrid.setAttribute('id', `${gridCount}`)
+        divGrid.setAttribute('style', `width: ${640 / slider.value}px; height: ${640 / slider.value}px`);
+        container.appendChild(divGrid);
+    }
 }
 
 slider.onchange = generateGrid;
