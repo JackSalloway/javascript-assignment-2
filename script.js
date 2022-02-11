@@ -23,6 +23,10 @@ const generateGrid = () => {
     const squared = slider.value * slider.value;
     sliderValue.textContent = slider.value;
     console.log(squared);
+
+    while (container.childNodes[0]) {
+        container.removeChild(container.childNodes[0]);
+    }
 }
 
 slider.onchange = generateGrid;
