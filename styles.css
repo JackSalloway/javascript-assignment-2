@@ -2,6 +2,10 @@ html {
     font-size: 10px;
 }
 
+body {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
 /* wrapper styles */
 
 .wrapper {
@@ -25,7 +29,7 @@ html {
 
 .box {
     border: solid 2px black;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.6);
     display: flex;
     justify-content: center;
     align-items: center;
