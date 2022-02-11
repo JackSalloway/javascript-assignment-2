@@ -5,11 +5,35 @@ html {
 /* wrapper styles */
 
 .wrapper {
-    width: 60vw;
+    width: 110rem;
     height: fit-content;
     margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.container {
+    height: 80rem;
+    width: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.box {
+    border: solid 2px black;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.sketch-options {
+    height: 60rem;
+    width: 25rem;
+}
+
+.sketch-drawing {
+    height: 60rem;
+    width: 60rem;
 }
