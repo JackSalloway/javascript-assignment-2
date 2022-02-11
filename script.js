@@ -1,6 +1,6 @@
 // identifers
 const container = document.querySelector('.sketch-container');
-const gridBox = document.querySelectorAll('.grid');
+
 
 // create gridCount variable
 let gridCount = 0;
@@ -14,3 +14,11 @@ for (gridCount; gridCount <= 255; gridCount++) {
     container.appendChild(divGrid);
 }
 
+const gridBox = document.querySelectorAll('.grid');
+
+gridBox.forEach((grid) => {
+    grid.addEventListener('mouseover', (e) => {
+        console.log(e.target);
+        e.target.style.backgroundColor = 'red';
+    })
+})
