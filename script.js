@@ -8,7 +8,6 @@ for (gridCount; gridCount <= 255; gridCount++) {
     const divGrid = document.createElement('div');
     divGrid.classList.add('grid');
     divGrid.setAttribute('id', `${gridCount + 1}`)
-    divGrid.textContent = `${gridCount + 1}`
     container.appendChild(divGrid);
 }
 
