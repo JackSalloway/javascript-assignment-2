@@ -47,7 +47,9 @@ html {
     justify-items: center;
 }
 
-.drawing-square {
-    width: fill;
-    height: fill;
+.grid {
+    width: 4rem;
+    height: 4rem;
+    text-align: center;
+    line-height: 4rem;
 }
