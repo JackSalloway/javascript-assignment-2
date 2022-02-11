@@ -1,3 +1,15 @@
 html {
     font-size: 10px;
 }
+
+/* wrapper styles */
+
+.wrapper {
+    width: 60vw;
+    height: fit-content;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
