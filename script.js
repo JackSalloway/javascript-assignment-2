@@ -12,7 +12,6 @@ const gridBox = document.querySelectorAll('.grid');
 
 gridBox.forEach((grid) => {
     grid.addEventListener('mouseover', (e) => {
-        console.log(e.target.id);
         e.target.style.backgroundColor = 'black';
     })
 })
