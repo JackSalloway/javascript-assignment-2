@@ -35,10 +35,13 @@ html {
     height: 60rem;
     width: 25rem;
     flex-direction: column;
-    gap: 5rem   ;
+    gap: 5rem;
 }
 
-.sketch-drawing {
-    height: 60rem;
-    width: 60rem;
+.sketch-drawing.box {
+    height: 64rem;
+    width: 64rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
 }
