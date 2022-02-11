@@ -38,7 +38,7 @@ html {
     gap: 5rem;
 }
 
-.sketch-drawing.box {
+.sketch-container.box {
     height: 64rem;
     width: 64rem;
     display: grid;
