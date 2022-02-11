@@ -1,13 +1,10 @@
 // identifers
 const container = document.querySelector('.sketch-container');
 
-// create gridCount variable
-let gridCount = 0;
-
-for (gridCount; gridCount <= 255; gridCount++) {
+for (let gridCount = 1; gridCount <= 256; gridCount++) {
     const divGrid = document.createElement('div');
     divGrid.classList.add('grid');
-    divGrid.setAttribute('id', `${gridCount + 1}`)
+    divGrid.setAttribute('id', `${gridCount}`)
     container.appendChild(divGrid);
 }
 
@@ -16,12 +13,17 @@ const gridBox = document.querySelectorAll('.grid');
 gridBox.forEach((grid) => {
     grid.addEventListener('mouseover', (e) => {
         console.log(e.target.id);
-        e.target.style.backgroundColor = 'red';
+        e.target.style.backgroundColor = 'black';
     })
 })
 
 const slider = document.getElementById('pixel-slider');
+const sliderValue = document.getElementById('slider-value');
 
-const valueCheck = () => {
-    console.log(slider.value);
+const generateGrid = () => {
+    const squared = slider.value * slider.value;
+    sliderValue.textContent = slider.value;
+    console.log(squared);
 }
+
+slider.onchange = generateGrid;
