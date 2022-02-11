@@ -15,7 +15,13 @@ const gridBox = document.querySelectorAll('.grid');
 
 gridBox.forEach((grid) => {
     grid.addEventListener('mouseover', (e) => {
-        console.log(e.target);
+        console.log(e.target.id);
         e.target.style.backgroundColor = 'red';
     })
 })
+
+const slider = document.getElementById('pixel-slider');
+
+const valueCheck = () => {
+    console.log(slider.value);
+}
