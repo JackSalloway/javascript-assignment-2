@@ -31,9 +31,11 @@ html {
     align-items: center;
 }
 
-.sketch-options {
+.sketch-options.box {
     height: 60rem;
     width: 25rem;
+    flex-direction: column;
+    gap: 5rem   ;
 }
 
 .sketch-drawing {
