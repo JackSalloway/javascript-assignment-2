@@ -37,6 +37,10 @@ const attachGridListeners = () => {
                 e.target.style.backgroundColor = `rgb(${numberGenerator()}, ${numberGenerator()}, ${numberGenerator()}`;
                 ;
             });
+        } else if (colorState === 'eraser') {
+            grid.addEventListener('mouseover', (e) => {
+                e.target.style.backgroundColor = '';
+            });
         }
     });
 }
@@ -51,6 +55,11 @@ blackColor.addEventListener('click', () => {
 rainbowColor.addEventListener('click', () => {
     colorState = 'rainbow';
     attachGridListeners();
+})
+
+eraseColor.addEventListener('click', () => {
+    colorState = 'eraser'
+    attachGridListeners()
 })
 
 clearButton.addEventListener('click', () => {
