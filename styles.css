@@ -55,7 +55,7 @@ body {
     height: 60rem;
     width: 25rem;
     flex-direction: column;
-    gap: 5rem;
+    gap: 3rem;
 }
 
 .sketch-options.box h2 {
@@ -63,6 +63,19 @@ body {
     font-style: italic;
     font-size: 3rem;
     border-bottom: 2px solid black;
+}
+
+.color-picker {
+    border: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+}
+
+.input-button {
+    width: 18rem;
+    height: 5rem;
+    font-size: 2rem;
+    border-radius: 1rem;
 }
 
 .slider-container {
