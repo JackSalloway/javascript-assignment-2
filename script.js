@@ -32,6 +32,11 @@ const attachGridListeners = () => {
 
 attachGridListeners();
 
+blackColor.addEventListener('click', () => {
+    console.log('test');
+    colorState = 'black';
+})
+
 const slider = document.getElementById('pixel-slider');
 const sliderValue = document.getElementById('slider-value');
 
