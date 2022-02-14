@@ -3,6 +3,8 @@ const colorState = 'black'
 
 // identifers
 const container = document.querySelector('.sketch-container');
+const blackColor = document.querySelector('.black-color');
+const rainbowColor = document.querySelector('.rainbow-color');
 
 for (let gridCount = 1; gridCount <= 256; gridCount++) {
     const divGrid = document.createElement('div');
