@@ -76,6 +76,11 @@ body {
     height: 5rem;
     font-size: 2rem;
     border-radius: 1rem;
+    transition: all .07s ease;
+}
+
+.selected {
+    transform: scale(1.1);
 }
 
 .slider-container {

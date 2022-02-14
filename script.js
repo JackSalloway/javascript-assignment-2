@@ -44,21 +44,40 @@ const attachGridListeners = () => {
     });
 }
 
+const toggleSelected = () => {
+    if (colorState === 'rainbow') {
+        colorPicker.classList.remove('selected');
+        eraseColor.classList.remove('selected');
+        rainbowColor.classList.add('selected');
+    } else if (colorState === 'eraser') {
+        colorPicker.classList.remove('selected');
+        rainbowColor.classList.remove('selected');
+        eraseColor.classList.add('selected');
+    } else {
+        rainbowColor.classList.remove('selected');
+        eraseColor.classList.remove('selected');
+        colorPicker.classList.add('selected');
+    }
+}
+
 attachGridListeners();
 
 colorPicker.addEventListener('change', (e) => {
     colorState = e.target.value;
+    toggleSelected();
     attachGridListeners()
 })
 
 rainbowColor.addEventListener('click', () => {
     colorState = 'rainbow';
+    toggleSelected();
     attachGridListeners();
 })
 
 eraseColor.addEventListener('click', () => {
-    colorState = 'eraser'
-    attachGridListeners()
+    colorState = 'eraser';
+    toggleSelected();
+    attachGridListeners();
 })
 
 clearButton.addEventListener('click', () => {
