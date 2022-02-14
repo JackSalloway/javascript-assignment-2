@@ -1,5 +1,5 @@
 // state identities
-const colorState = 'black'
+let colorState = 'black'
 
 // identifers
 const container = document.querySelector('.sketch-container');
