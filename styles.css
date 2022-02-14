@@ -57,6 +57,13 @@ body {
     gap: 5rem;
 }
 
+.sketch-options.box h2 {
+    font-weight: 700;
+    font-style: italic;
+    font-size: 3rem;
+    border-bottom: 2px solid black;
+}
+
 .slider-container {
     display: flex;
     flex-direction: column;
