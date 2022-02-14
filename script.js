@@ -30,8 +30,8 @@ const attachGridListeners = () => {
             });
         } else if (colorState === 'rainbow') {
             grid.addEventListener('mouseover', (e) => {
-                e.target.setAttribute('style', `background-color:rgb(${numberGenerator()}, ${numberGenerator()}, ${numberGenerator()});
-                width: ${640 / slider.value}px; height: ${640 / slider.value}px`);
+                e.target.style.backgroundColor = `rgb(${numberGenerator()}, ${numberGenerator()}, ${numberGenerator()}`;
+                ;
             });
         }
     });
