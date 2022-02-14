@@ -1,5 +1,7 @@
 html {
     font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+
 }
 
 body {
@@ -24,8 +26,15 @@ body {
     align-items: center;
 }
 
+.wrapper h1 {
+    font-style: italic;
+    font-weight: 900;
+    font-size: 6rem;
+    margin: 5rem 0;
+}
+
 .container {
-    height: 80rem;
+    height: 65rem;
     width: inherit;
     display: flex;
     justify-content: center;
