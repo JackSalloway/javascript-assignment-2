@@ -1,3 +1,6 @@
+// state identities
+const colorState = 'black'
+
 // identifers
 const container = document.querySelector('.sketch-container');
 
@@ -17,10 +20,12 @@ const attachGridListeners = () => {
     const gridBox = document.querySelectorAll('.grid');
 
     gridBox.forEach((grid) => {
-        grid.addEventListener('mouseover', (e) => {
-            e.target.style.backgroundColor = 'black';
-        })
-    })
+        if (colorState === 'black') {
+            grid.addEventListener('mouseover', (e) => {
+                e.target.style.backgroundColor = 'black';
+            });
+        }
+    });
 }
 
 attachGridListeners();
