@@ -52,7 +52,9 @@ rainbowColor.addEventListener('click', () => {
     attachGridListeners();
 })
 
-
+clearButton.addEventListener('click', () => {
+    generateGrid();
+})
 
 const generateGrid = () => {
     const squared = slider.value * slider.value;
