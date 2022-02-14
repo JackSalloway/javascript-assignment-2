@@ -3,8 +3,11 @@ let colorState = 'black'
 
 // identifers
 const container = document.querySelector('.sketch-container');
+// buttons
 const blackColor = document.querySelector('.black-color');
 const rainbowColor = document.querySelector('.rainbow-color');
+const clearButton = document.querySelector('.clear');
+// slider
 const slider = document.getElementById('pixel-slider');
 const sliderValue = document.getElementById('slider-value');
 
