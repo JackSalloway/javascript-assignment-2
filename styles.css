@@ -30,6 +30,7 @@ body {
     font-style: italic;
     font-weight: 900;
     font-size: 6rem;
+    border-bottom: 4px solid black;
     margin: 5rem 0;
 }
 
