@@ -5,6 +5,7 @@ let colorState = 'black'
 const container = document.querySelector('.sketch-container');
 // buttons
 const blackColor = document.querySelector('.black-color');
+const colorPicker = document.querySelector('.color-picker');
 const rainbowColor = document.querySelector('.rainbow-color');
 const eraseColor = document.querySelector('.eraser');
 const clearButton = document.querySelector('.clear');
