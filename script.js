@@ -1,10 +1,9 @@
 // state identities
-let colorState = 'black'
+let colorState = '#000000'
 
 // identifers
 const container = document.querySelector('.sketch-container');
 // buttons
-const blackColor = document.querySelector('.black-color');
 const colorPicker = document.querySelector('.color-picker');
 const rainbowColor = document.querySelector('.rainbow-color');
 const eraseColor = document.querySelector('.eraser');
@@ -29,11 +28,7 @@ const attachGridListeners = () => {
     const gridBox = document.querySelectorAll('.grid');
 
     gridBox.forEach((grid) => {
-        if (colorState === 'black') {
-            grid.addEventListener('mouseover', (e) => {
-                e.target.style.backgroundColor = 'black';
-            });
-        } else if (colorState === 'rainbow') {
+        if (colorState === 'rainbow') {
             grid.addEventListener('mouseover', (e) => {
                 e.target.style.backgroundColor = `rgb(${numberGenerator()}, ${numberGenerator()}, ${numberGenerator()}`;
             });
@@ -50,11 +45,6 @@ const attachGridListeners = () => {
 }
 
 attachGridListeners();
-
-blackColor.addEventListener('click', () => {
-    colorState = 'black';
-    attachGridListeners();
-})
 
 colorPicker.addEventListener('change', (e) => {
     colorState = e.target.value;
