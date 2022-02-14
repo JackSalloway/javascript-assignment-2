@@ -35,7 +35,6 @@ const attachGridListeners = () => {
         } else if (colorState === 'rainbow') {
             grid.addEventListener('mouseover', (e) => {
                 e.target.style.backgroundColor = `rgb(${numberGenerator()}, ${numberGenerator()}, ${numberGenerator()}`;
-                ;
             });
         } else if (colorState === 'eraser') {
             grid.addEventListener('mouseover', (e) => {
