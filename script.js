@@ -5,6 +5,8 @@ let colorState = 'black'
 const container = document.querySelector('.sketch-container');
 const blackColor = document.querySelector('.black-color');
 const rainbowColor = document.querySelector('.rainbow-color');
+const slider = document.getElementById('pixel-slider');
+const sliderValue = document.getElementById('slider-value');
 
 for (let gridCount = 1; gridCount <= 256; gridCount++) {
     const divGrid = document.createElement('div');
@@ -26,6 +28,11 @@ const attachGridListeners = () => {
             grid.addEventListener('mouseover', (e) => {
                 e.target.style.backgroundColor = 'black';
             });
+        } else if (colorState === 'rainbow') {
+            grid.addEventListener('mouseover', (e) => {
+                e.target.setAttribute('style', `background-color:rgb(${numberGenerator()}, ${numberGenerator()}, ${numberGenerator()});
+                width: ${640 / slider.value}px; height: ${640 / slider.value}px`);
+            });
         }
     });
 }
@@ -33,17 +40,21 @@ const attachGridListeners = () => {
 attachGridListeners();
 
 blackColor.addEventListener('click', () => {
-    console.log('test');
     colorState = 'black';
+    attachGridListeners();
 })
 
-const slider = document.getElementById('pixel-slider');
-const sliderValue = document.getElementById('slider-value');
+rainbowColor.addEventListener('click', () => {
+    colorState = 'rainbow';
+    attachGridListeners();
+})
+
+
 
 const generateGrid = () => {
     const squared = slider.value * slider.value;
     sliderValue.textContent = slider.value;
-    console.log(squared);
+    console.log(`Ammount of squares = ${squared}`);
 
     while (container.childNodes[0]) {
         container.removeChild(container.childNodes[0]);
