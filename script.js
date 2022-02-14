@@ -21,7 +21,7 @@ for (let gridCount = 1; gridCount <= 256; gridCount++) {
 
 // create random color picker
 const numberGenerator = () => {
-    return Math.floor(Math.random() * 255);
+    return Math.floor(Math.random() * 256);
 }
 
 const attachGridListeners = () => {
