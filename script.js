@@ -41,6 +41,10 @@ const attachGridListeners = () => {
             grid.addEventListener('mouseover', (e) => {
                 e.target.style.backgroundColor = '';
             });
+        } else {
+            grid.addEventListener('mouseover', (e) => {
+                e.target.style.backgroundColor = colorState;
+            })
         }
     });
 }
@@ -50,6 +54,11 @@ attachGridListeners();
 blackColor.addEventListener('click', () => {
     colorState = 'black';
     attachGridListeners();
+})
+
+colorPicker.addEventListener('change', (e) => {
+    colorState = e.target.value;
+    attachGridListeners()
 })
 
 rainbowColor.addEventListener('click', () => {
