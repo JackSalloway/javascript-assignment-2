@@ -8,6 +8,11 @@ for (let gridCount = 1; gridCount <= 256; gridCount++) {
     container.appendChild(divGrid);
 }
 
+// create random color picker
+const numberGenerator = () => {
+    return Math.floor(Math.random() * 255);
+}
+
 const attachGridListeners = () => {
     const gridBox = document.querySelectorAll('.grid');
 
